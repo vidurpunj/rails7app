@@ -1,0 +1,25 @@
+<div class="container">
+  <%= form_with model: @user,  url: login_submit_path do |f| %>
+    <div class="row form-rows">
+      <div class="col-md-4" for=""><label for="email">Email</label></div>
+      <div class="col-md-4 ">
+        <%= f.text_field :email, class: 'form-control'%>
+<!--        <input type="text" class="form-control" name="email">-->
+      </div>
+    </div>
+    <div class="row form-rows">
+      <div class="col-md-4"><label for="password">Password</label></div>
+      <div class="col-md-4">
+        <%= f.password_field :password, class: 'form-control' %>
+<!--        <input type="password" class="form-control" name="password">-->
+      </div>
+    </div>
+    <div class="row form-rows">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <%= f.submit 'login', class: 'form-control btn btn-primary' %>
+<!--        <input type="submit" value="login" class="form-control btn btn-primary">-->
+      </div>
+    </div>
+  <% end %>
+</div>

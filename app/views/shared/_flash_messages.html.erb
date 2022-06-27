@@ -1,0 +1,11 @@
+<% flash.each do |key, msg| %>
+  <% if key.eql?('notice') %>
+    <div class="alert alert-success">
+      <%= msg %>
+    </div>
+    <% elsif key.eql?('alert') %>
+    <div class="alert alert-danger">
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
